@@ -22,23 +22,27 @@ header{
     display: flex;
     align-items: center;
 }
-.logo{
-    width: 100px;
+.logo img {
+    /* background-color: #778; */
+    width: 300px;
+    height: 150px;
 }
 .logoimg {
-    width: 80px;
-    height: 80px;
-    background-color: #b28756;
-    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    /* width: 160px;
+    height: 80px; */
+    /* background-color: #864ee8;
+    border-radius: 50%; */
 }
 .menu-opener{
     display: none;
 }
-
 .menu{
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .menu ul, menu li{
     list-style: none;
@@ -47,36 +51,43 @@ header{
     display: flex;
 }
 .menu li a {
+    flex-wrap: wrap;
     color: #FFF;
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
+    text-align: center;
     /* Colocando display flex/block para conseguirmos aumentar a altura e colocar a borda a abaixo*/
     display: flex;
     align-items: center;
     height: 100px;
-    padding: 0 10px 0 10px;
+    padding: 0 8px 0 8px;
     /* Tirando o comportamento padrão de o elemento dar um pequeno zoom qnd passamos o mouse e é adicionada uma borda */
     border-bottom: 5px solid #000;
 }
 .menu li a:hover,.menu .active a{
-    border-bottom: 5px solid #b28756;
+    border-bottom: 5px solid #864ee8;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     color: #CCC;
 }
 .btn {
     display: inline-block;
-    width: 190px;
-    margin-top: 35px;
+    width: 230px;
+    margin-top: 55px;
+    padding: 15px 12px;
     text-decoration: none;
+    font-size: 15px;
     color: #fff;
     text-align: center;
-    background-color: #b28756;
-    padding: 12px;
+    background-color: #6311f1;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 20px;
+}
+.btn:hover{
+    transform: scale(1.15);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1)
 }
 
 .banner{
@@ -110,12 +121,13 @@ header{
     height: 100%;
 }
 .banner h1{
+    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 45px;
 }
 .banner span{
-    color:#b28756;
+    color:#864ee8;
 }
 .banner h2{
     font-size: 17px;
@@ -127,7 +139,7 @@ header{
     height: 20px;
     /* Deixando o elemento flutuante (sem se posicionar baseado em nenhum outro elemento, ou seja, 100% soltinho) */
     position: absolute;
-    margin-top: -15vh;
+    margin-top: -17vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,7 +257,7 @@ header{
     cursor: pointer;
 }
 .section-projects--filters li:hover, .section-projects--filters li.active{
-    border-bottom: 3px solid #b28756;
+    border-bottom: 3px solid #864ee8;
 }
 .section-projects--filters li:first-child{
     border-left: 0;
@@ -366,7 +378,7 @@ header{
     margin-right: 10px;
 }
 .section-team--social a:hover{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .section-reviews-area{
     display: flex;
@@ -401,7 +413,7 @@ header{
     align-items: center;
 }
 .section-reviews-area .active-pointer{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .section-reviews-companies{
     display: inherit;
@@ -450,10 +462,10 @@ section .plans-prices-services div{
     width: 140px;
 }
 .btn.choose:hover{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .btn.choose.active-pointer{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .premium {
     border-top:2px solid #bbb;
@@ -511,19 +523,19 @@ section .plans-prices-services div{
 .pointer {
     width: 15px;
     height: 15px;
-    border: 2px solid #b28756;
+    border: 2px solid #864ee8;
     border-radius: 50%;
     margin: 0 5px 0 5px;
     cursor: pointer;
 }
 .pointer.active {
-    background-color:#B28756;
+    background-color:#864ee8;
 }
 .pointer:hover{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .active-pointer{
-    background-color: #b28756;
+    background-color: #864ee8;
 }
 .section-facts-area{
     display: flex;
@@ -536,7 +548,7 @@ section .plans-prices-services div{
     align-items: center;
 }
 .sections-facts-numbers{
-    color: #b28756;
+    color: #864ee8;
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 7px;
@@ -738,7 +750,7 @@ section .plans-prices-services div{
     border: none;
     text-transform: uppercase;
     color:#fff;
-    background-color: #b28756;
+    background-color: #864ee8;
     padding: 13px;
     font-size: 14px;
     font-weight: bold;
@@ -749,7 +761,119 @@ section .plans-prices-services div{
     transform: scale(1.10);
     background-color: #926f48;
 }
+/* Sliders */
+    .container-slider{
+        position: relative;
+        padding: 15px;
+        max-width: 100vw;
+        margin: 0 auto;
+        background-color: #333;
+        /* text-align: center; */
+    }
 
+    .gallery-wrapper{
+        overflow-x: auto;
+    }
+    .gallery {
+        display: flex;
+        gap: 100px;
+        /* Redundante */
+        flex-flow: row nowrap;
+    }
+
+    .zindex{
+        display: none;
+    }
+    .current-item-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 100%;
+        position: absolute;
+        margin-top: 50vh;
+    }
+    .current-item-txt h1{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 45px;    
+    }
+    .current-item-txt span{
+        color:#864ee8;
+    }
+    .current-item-txt h2{
+        font-size: 17px;
+        text-transform: uppercase;
+        margin-top: 7px;
+    }
+    .link-contact{
+        margin-left: 5px;
+        color: rgb(60, 214, 199);
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: none;  
+        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: inline-block;
+    }
+    .link-contact:hover{
+        text-align: center;
+        margin-left: 20px;
+        margin-top: 1px;
+        background-color: #333;
+        border-radius: 15px;
+        width: 150px;
+        transform:scale(1.25,1.25);
+    }
+
+    .arrow-left, .arrow-right{
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        font-size: 30px;
+        /* line-height: 250px; */
+        width: 70px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        background: linear-gradient(to left, transparent 0%, black 150%);  
+        opacity: 0.3;
+    }
+    .arrow-right{
+        left: auto;
+        right: 0;
+        /* padding-right: 50px; */
+        background: linear-gradient(to right, transparent 0%, black 150%);  
+    }
+    .arrow-left:hover, .arrow-right:hover, .current-item-txt h2 a:hover{
+        opacity: 1;
+        transition: all 600ms ease-in-out;
+    }
+
+    .item {
+        width: 96vw;
+        height: 100vh; 
+        flex-shrink: 0;
+        opacity: 0.5;
+        border: 5px solid #fff;
+        transition: all 600ms ease-in-out;
+    }
+    .current-item{
+        opacity: 1;
+        border: 5px solid turquoise;
+        box-shadow: 0 0 50px turquoise;
+    }
+    .gallery-wrapper::-webkit-scrollbar{
+        display: none;
+    }
+
+/* End slider */
 @media (max-width:450px){
     .menu-opener{
         display: block;
@@ -783,7 +907,7 @@ section .plans-prices-services div{
     }
     .menu li.active a {
         border: 0;
-        color: #b28756;
+        color: #864ee8;
     }
     .banner h1 {
         font-size: 33px;
@@ -1022,7 +1146,7 @@ section .plans-prices-services div{
     }
     .menu li.active a {
         border: 0;
-        color: #b28756;
+        color: #864ee8;
     }
     .section-aboutus{
         flex-direction: column;
