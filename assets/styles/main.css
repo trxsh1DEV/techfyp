@@ -185,6 +185,7 @@ header{
 /* CSS de areás específicas */
 .section-aboutus{
     display: flex;
+    margin-left: 20px;
 }
 .section-aboutus--left{
     flex:1;
@@ -192,10 +193,10 @@ header{
 .section-aboutus--left p {
     font-size: 14px;
     line-height: 25px;
-    padding-left: 5px;
 }
 .section-aboutus--right{
     width: 500px;
+    margin-left: 15px;
     text-align: center;
 }
 .section-aboutus--right img{
@@ -318,14 +319,21 @@ header{
     padding-bottom: 50px;
 }
 .section-team{
-    overflow: hidden;
+    /* background-color: red; */
+    display: flex;
+    height: 333px;
+    overflow: auto;
     max-width: 880px;
     margin: auto;
+}
+.section-team::-webkit-scrollbar{
+    display: none;
 }
 .section-team .sliders{
     /* Espaço pra 10 sliders, 1000vh = 100vh * 10 */
     width: 1000vw;
     height: 100%;
+    display: flex;
 }
 .section-team .slide{
     /* Pegando area inteira (width) */
@@ -380,16 +388,37 @@ header{
 .section-team--social a:hover{
     background-color: #864ee8;
 }
-.section-reviews-area{
+
+/* Reviews */
+
+/* Funcionalidade pointers reviews */
+.section-reviews-global{
+    max-width: 900px;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    height: 570px;
+    overflow: scroll;
+    margin: auto;
 }
+.section-reviews-local{
+    margin: auto 20px;
+}
+
 .section-reviews{
-    width: 800px;
-    height: 100%;
+    width: auto;
     text-align: center;
     margin: auto;
 }
+.section-reviews-global::-webkit-scrollbar{
+    display: none;
+}
+.section-reviews--avatar{
+    width: 120px;
+    height: auto;
+}
+
 .section-reviews--customers .quote{
     padding: 30px 0 10px 0;
 }
@@ -404,23 +433,14 @@ header{
     line-height: 22px;
     font-weight: 500;
 }
- .section-reviews-area .sliders-pointers{
-    margin-top: 50px;
-    height: 20px;
-    /* Deixando o elemento flutuante (sem se posicionar baseado em nenhum outro elemento, ou seja, 100% soltinho) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section-reviews-area .active-pointer{
-    background-color: #864ee8;
-}
 .section-reviews-companies{
-    display: inherit;
+    display: flex;
     justify-content: space-between;
     margin-top: 80px;
-
+    padding: 0 15px;
 }
+
+
 .default.default-price{
     padding: 0;
     padding-bottom: 50px;
@@ -428,7 +448,8 @@ header{
 section .section-prices{
     display: flex;
     justify-content: space-between;
-    width: 1050px;
+    align-items: center;
+    width: auto;
     height: 100%;
     text-align: center;
     margin: auto;
@@ -514,7 +535,7 @@ section .plans-prices-services div{
 }
 
 .sliders-pointers {
-    margin-top: 50px;
+    margin-top: 35px;
     height: 20px;
     display: flex;
     justify-content: center;
@@ -872,8 +893,11 @@ section .plans-prices-services div{
     .gallery-wrapper::-webkit-scrollbar{
         display: none;
     }
-
 /* End slider */
+
+
+
+/* Responsividade em dispositivos móveis */
 @media (max-width:450px){
     .menu-opener{
         display: block;
@@ -955,8 +979,7 @@ section .plans-prices-services div{
     .section-team{
         max-width: 280px;
     }
-
-    .section-reviews{
+    .section-reviews{   
         padding-left: 3px;
         width: auto;
     }
@@ -1105,7 +1128,11 @@ section .plans-prices-services div{
 
 
 
-
+@media(min-width:810px) and (max-width:980px){
+    .section-reviews-global{
+        /* width: 700px; */
+    }
+}
 
 
 
@@ -1170,8 +1197,8 @@ section .plans-prices-services div{
     .section-team{
         max-width: 580px;
     }
-
     .section-reviews{
+        /* padding-top: 100px; */
         width: auto;
     }
     .section-reviews p{
@@ -1272,3 +1299,4 @@ section .plans-prices-services div{
     }
 
 };
+

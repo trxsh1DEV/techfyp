@@ -1,15 +1,19 @@
-// Images
-
+// Slider arrows
 const controls = document.querySelectorAll('.control'); // botões para passar as imagens pra esquerda e direita
 let currentItem = 0; // item que está selecionado atualmente
 const items = document.querySelectorAll('.item'); // pegando todas as imagens
 const maxItems = items.length;// pegando o total de itens para facilitar em algumas contas
-
 // Texts
-let currentTxt = 0;
 const texts = document.querySelectorAll('.zindex');
-const maxText = texts.length
-const txtCurrent = document.querySelector('.current-item-txt')
+
+// Slider pointers (Team)
+const pointersTeam = document.querySelectorAll('.section-team-area button');
+const sliderPointerTeam = document.querySelectorAll('.section-team .sliders');
+// Reviews
+const pointersReview = document.querySelectorAll('.section-rev button');
+const sliderPointerReview = document.querySelectorAll('.section-reviews-global .sliders');
+// console.log(pointersReview);
+// console.log(sliderPointerReview);
 
 // Toda vez que o botão direito ou esquerdo for pressionado...
 controls.forEach(control => {
@@ -30,15 +34,52 @@ controls.forEach(control => {
                 inline: "nearest",
                 behavior: "auto"
             });
-
             items[currentItem].classList.add('current-item'); 
 
             texts[currentItem].scrollIntoView({
                 inline: "nearest",
-                behavior: "smooth"
+                behavior: "auto"
             })                                              
-                
             texts[currentItem].classList.add('current-item-txt')
-            //     console.log(currentTxt);
     });
 });
+
+pointersTeam.forEach((p, index) => {
+    p.addEventListener('click', () => {
+        // console.log('first', index);
+        pointersTeam.forEach(p => p.classList.remove('active-pointer'));
+        sliderPointerTeam.forEach(img => img.classList.remove('current-item-team'));
+        exec(index);
+
+        pointersTeam[index].classList.add('active-pointer');
+        sliderPointerTeam[index].classList.add('current-item-team');
+        // console.log('second', index);
+    });
+    function exec(indice){
+        sliderPointerTeam[indice].scrollIntoView( {
+            inline: "center",
+            behavior: "auto",
+            block:"nearest"
+        });
+    };
+});
+
+pointersReview.forEach((p,index) => {
+    console.log(index);
+    p.addEventListener('click', () => {
+        pointersReview.forEach(p => p.classList.remove('active-pointer'));
+        sliderPointerReview.forEach(img => img.classList.remove('current-item-review'));
+        exec(index);
+
+        pointersReview[index].classList.add('active-pointer');
+        sliderPointerReview[index].classList.add('current-item-review');
+    });
+
+    function exec(indice){
+        sliderPointerReview[indice].scrollIntoView( {
+            inline: "center",
+            behavior: "auto",
+            block:"nearest"
+        });
+    };
+})

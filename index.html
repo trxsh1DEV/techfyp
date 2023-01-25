@@ -12,15 +12,10 @@
     <header>
         <!-- Area do cabeçalho disponível -->
         <div class="header">
-            <!-- <div class="logo"><img src="./uploads/images/TechFYP Logo branco.png" alt="">
-                <div class="logoimg"></div>
-            </div> -->
             <div class="logo">
                 <div class="logoimg"><img src="./uploads/images/TechFYP Logo branco.png" alt=""></div>
             </div>
             <div class="menu">
-                <!-- ./assets/images/menu.png -->
-                <!-- <img class="menu-opener" src="./assets/images/menu.png" alt="menu"> -->
                 <nav>
                     <ul>
                         <li class="active"><a href="/">Home</a></li>
@@ -37,19 +32,9 @@
         </div>
     </header>
 
-    <!-- <button class="arrow-left control" aria-label="Previous image">◀</button>
-    <button class="arrow-right control" aria-label="Previous image">▶</button>
-    <div class="gallery-wrapper">
-        <div class="gallery">
-            <img class="item current-item" src="https://source.unsplash.com/random/500x500/?beach" alt="Beach img">
-            <img class="item" src="https://source.unsplash.com/random/500x500/?animal" alt="Animal img">
-            <img class="item" src="https://source.unsplash.com/random/500x500/?night" alt="Night img">
-            <img class="item" src="https://source.unsplash.com/random/500x500/?park" alt="park img">
-            <img class="item" src="https://source.unsplash.com/random/500x500/?Sun" alt="Sun img">
-        </div>
-    </div> -->
+
     <main>
-        <section class="banner">
+        <!-- <section class="banner">
             <div class="sliders">
                 <div class="slide">
                     <div class="slidearea">
@@ -78,7 +63,37 @@
                 <a class="pointer" href="/"></a>
                 <a class="pointer" href="/"></a>
             </div>
+        </section> -->
+
+        <section class="my-class">
+        <div class="container-slider">
+            <button class="arrow-left control slider-img" aria-label="Previous image">◀</button>
+            <button class="arrow-right control slider-img" aria-label="Previous image">▶</button>
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img class="item current-item" src="https://source.unsplash.com/random/1920x1080/?night" alt="Beach img">
+                    <div class="zindex current-item-txt">
+                        <h1>TI também é sobre...<br><span>Comunicação!</span></h1>
+                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
+                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
+                    </div>
+                    <img class="item" src="https://source.unsplash.com/random/1920x1080/?dark" alt="Beach img">
+                    <div class="zindex">
+                        <h1>TI satisfação do cliente<br><span>Comunicação</span></h1>
+                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
+                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
+                    </div>
+                    <img class="item" src="https://source.unsplash.com/random/1920x1080/?mistery" alt="Beach img">
+                    <div class="zindex">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit<br><span>Comunicação</span></h1>
+                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
+                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </section>
+
         <section class="default light">
             <div class="section-title">About us</div>
             <div class="section-desc">Who we are?</div>
@@ -267,7 +282,7 @@
                 <div class="section-desc">Our Co-Workers</div>
                 <div class="section-body">
                     <div class="section-team">
-                        <div class="sliders" style="margin-left: 0;">
+                        <div class="sliders current-item-team" style="margin-left: 0;">
                             <div class="slide">
                                 <div class="slidearea">
                                     <img class="section-team--avatar" src="./media/mulher1.png" alt="">
@@ -281,7 +296,8 @@
                                         <a href=""><img src="./assets/images/pinterest.png" alt=""></a>
                                     </div>
                                 </div>
-                            </div><div class="slide">
+                            </div>
+                            <div class="slide">
                                 <div class="slidearea">
                                     <img class="section-team--avatar" src="./media/homem1.png" alt="">
                                     <div class="section-team--name">Mike Chiller</div>
@@ -309,11 +325,53 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="sliders" style="margin-left: 0;">
+                            <div class="slide">
+                                <div class="slidearea">
+                                    <img class="section-team--avatar" src="./media/homem2.png" alt="">
+                                    <div class="section-team--name">Lesbiscas</div>
+                                    <div class="section-team--role">mente master</div>
+                                    <div class="section-team--social">
+                                        <a href=""><img src="./assets/images/facebook.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/googleplus.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/linkedin.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/twitter.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/pinterest.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div><div class="slide">
+                                <div class="slidearea">
+                                    <img class="section-team--avatar" src="./media/mulher1.png" alt="">
+                                    <div class="section-team--name">Maicon do chile</div>
+                                    <div class="section-team--role">cabeça criativa</div>
+                                    <div class="section-team--social">
+                                        <a href=""><img src="./assets/images/facebook.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/googleplus.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/linkedin.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/twitter.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/pinterest.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div><div class="slide">
+                                <div class="slidearea">
+                                    <img class="section-team--avatar" src="./media/homem1.png" alt="">
+                                    <div class="section-team--name">Ana johnsons</div>
+                                    <div class="section-team--role">grta TI</div>
+                                    <div class="section-team--social">
+                                        <a href=""><img src="./assets/images/facebook.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/googleplus.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/linkedin.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/twitter.png" alt=""></a>
+                                        <a href=""><img src="./assets/images/pinterest.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sliders-pointers">
-                        <div class="pointer active-pointer"></div>
-                        <div class="pointer"></div>
-                        <div class="pointer"></div>
+                        <button class="pointer active-pointer"></button>
+                        <button class="pointer"></button>
+                        <!-- <button class="pointer"></button> -->
                     </div>
                 </div>
             </div>
@@ -321,32 +379,55 @@
         <section class="default light">
             <div class="section-title">Happy Clients</div>
             <div class="section-desc">Client Reviews</div>
-            <div class="section-body">
-                <div class="section-reviews-area">
-                    <div class="section-reviews">
-                        <div class="section-reviews--customers">
-                            <img class="section-reviews--avatar" src="./media/homem2.png" alt="">
-                            <div class="section-team--name" style="text-transform: capitalize;">John Doe</div>
-                            <div class="section-reviews--role">Head of PR Departament</div>
-                            <img class="quote" src="./assets/images/quote.png" alt="">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae harum neque maiores nostrum magni saepe alias nesciunt aliquid distinctio! Accusantium obcaecati officiis deleniti. Doloremque voluptatibus commodi quibusdam aut commodi quibusdam aut veniam!</p>
-                        </div>      
+            <div class="section-body section-rev">
+                <div class="section-reviews-global">
+                    <div class="section-reviews-local">
+                        <div class="section-reviews current-item-review sliders">
+                            <div class="section-reviews--customers">
+                                <img class="section-reviews--avatar" src="./media/homem2.png" alt="">
+                                <div class="section-team--name" style="text-transform: capitalize;">John Doe</div>
+                                <div class="section-reviews--role">Head of PR Departament</div>
+                                <img class="quote" src="./assets/images/quote.png" alt="">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae harum neque maiores nostrum magni saepe alias nesciunt aliquid distinctio! Accusantium obcaecati officiis deleniti. Doloremque voluptatibus commodi quibusdam aut commodi quibusdam aut veniam!</p>
+                            </div>      
+                        </div>
+                    
+                        <div class="section-reviews-companies">
+                            <a href=""><img src="./media/empresa1.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa2.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa3.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa4.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa5.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa6.png" alt=""></a> 
+                        </div>
                     </div>
-                
-                    <div class="sliders-pointers">
-                        <div class="pointer active-pointer"></div>
-                        <div class="pointer"></div>
-                        <div class="pointer"></div>
-                    </div>
-                    <div class="section-reviews-companies">
-                        <a href=""><img src="./media/empresa1.png" alt=""></a> 
-                        <a href=""><img src="./media/empresa2.png" alt=""></a> 
-                        <a href=""><img src="./media/empresa3.png" alt=""></a> 
-                        <a href=""><img src="./media/empresa4.png" alt=""></a> 
-                        <a href=""><img src="./media/empresa5.png" alt=""></a> 
-                        <a href=""><img src="./media/empresa6.png" alt=""></a> 
+                    <div class="section-reviews-local">
+                        <div class="section-reviews sliders">
+                            <div class="section-reviews--customers">
+                                <img class="section-reviews--avatar" src="./media/homem1.png" alt="">
+                                <div class="section-team--name" style="text-transform: capitalize;">John Doe</div>
+                                <div class="section-reviews--role">Head of PR Departament</div>
+                                <img class="quote" src="./assets/images/quote.png" alt="">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae harum neque maiores nostrum magni saepe alias nesciunt aliquid distinctio! Accusantium obcaecati officiis deleniti. Doloremque voluptatibus commodi quibusdam aut commodi quibusdam aut veniam!</p>
+                            </div>      
+                        </div>
+                    
+                        <div class="section-reviews-companies">
+                            <a href=""><img src="./media/empresa1.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa2.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa3.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa4.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa5.png" alt=""></a> 
+                            <a href=""><img src="./media/empresa6.png" alt=""></a> 
+                        </div>
                     </div>
                 </div>
+                
+                <div class="sliders-pointers">
+                    <button class="pointer active-pointer"></button>
+                    <button class="pointer"></button>
+                </div>
+                
             </div>
         </section>
         <section class="default light default-price">
@@ -545,36 +626,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="my-class">
-        <div class="section-title">Slider com HTML e CSS</div>
-        <div class="container-slider">
-            <button class="arrow-left control" aria-label="Previous image">◀</button>
-            <button class="arrow-right control" aria-label="Previous image">▶</button>
-            <div class="gallery-wrapper">
-                <div class="gallery">
-                    <img class="item current-item" src="https://source.unsplash.com/random/1920x1080/?night" alt="Beach img">
-                    <div class="zindex current-item-txt">
-                        <h1>TI também é sobre...<br><span>Comunicação!</span></h1>
-                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
-                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
-                    </div>
-                    <img class="item" src="https://source.unsplash.com/random/1920x1080/?dark" alt="Beach img">
-                    <div class="zindex">
-                        <h1>TI satisfação do cliente<br><span>Comunicação</span></h1>
-                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
-                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
-                    </div>
-                    <img class="item" src="https://source.unsplash.com/random/1920x1080/?mistery" alt="Beach img">
-                    <div class="zindex">
-                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit<br><span>Comunicação</span></h1>
-                        <h2>Dúvidas? <a href="https://api.whatsapp.com/send?phone=5511969642568" class="link-contact" target="_blank">Clique aqui</a></h2>
-                        <a href="https://api.whatsapp.com/send?phone=5511969642568" class="btn">Entre em contato!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         </section>
 
         </main>
