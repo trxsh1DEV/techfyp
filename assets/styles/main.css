@@ -154,7 +154,7 @@ header{
     font-weight: bold;
 }
 .default .section-desc{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #bbb;
     margin-bottom: 40px;
@@ -185,7 +185,7 @@ header{
 /* CSS de areás específicas */
 .section-aboutus{
     display: flex;
-    margin-left: 20px;
+    margin-left: 24px;
 }
 .section-aboutus--left{
     flex:1;
@@ -399,7 +399,7 @@ header{
     flex-direction: column;
     flex-wrap: wrap;
     height: 570px;
-    overflow: scroll;
+    overflow: auto;
     margin: auto;
 }
 .section-reviews-local{
@@ -451,8 +451,9 @@ section .section-prices{
     align-items: center;
     width: auto;
     height: 100%;
-    text-align: center;
     margin: auto;
+    margin-left: 10px;
+    text-align: center;
 }
 section .section-title-price{
     border-top: 2px solid #bbb;
@@ -770,8 +771,8 @@ section .plans-prices-services div{
     margin-top: 40px;
     border: none;
     text-transform: uppercase;
-    color:#fff;
-    background-color: #864ee8;
+    color:#333;
+    background-color: #fff;
     padding: 13px;
     font-size: 14px;
     font-weight: bold;
@@ -780,7 +781,8 @@ section .plans-prices-services div{
 }
 .section-footer--right form button:hover{
     transform: scale(1.10);
-    background-color: #926f48;
+    background-color: #111;
+    color: #fff;
 }
 /* Sliders */
     .container-slider{
@@ -806,20 +808,21 @@ section .plans-prices-services div{
         display: none;
     }
     .current-item-txt{
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #fff;
-        width: 100%;
         position: absolute;
+        color: #fff;
         margin-top: 50vh;
     }
     .current-item-txt h1{
+        width: 50vw;
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 45px;    
+        font-size: 45px;
     }
     .current-item-txt span{
         color:#864ee8;
