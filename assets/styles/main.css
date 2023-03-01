@@ -595,12 +595,18 @@ section .plans-prices-services div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: flex-end;
+    background-color: #223243;
+    /* background-color: #000; */
+    /* min-height: 100vh; */
+}
+.default-form{
+    padding: 0px 0;
 }
 .section-contact-social{
     display: flex;
-    margin-top: -25px;
-    margin-bottom: 70px;
+    /* margin-top: -205px; */
+    margin: 20px auto 50px auto;
 }
 .section-contact-social a {
     display: inline-flex;
@@ -629,41 +635,121 @@ section .plans-prices-services div{
     color: #aaa;
     font-weight: 600;
 }
-.section-contactus form{
+
+/* Formulario começo */
+.container-form{
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid #223243;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.1),
+    15px 15px 15px rgba(0,0,0,0.35),
+    inset -2px -2px 15px rgba(255,255,255,0.1),
+    inset 15px 15px 15px rgba(0,0,0,0.35);
+    margin-bottom: 60px;
+}
+.container-form .form{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
 }
-/* Usando o nth-child pra aplicar x propriedades apenas dos elementos 3 ao 4 */
-.section-contactus input[type=text]:nth-child(n+3):nth-child(-n+4){
-    width: 100%;
+.container-form .form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
 }
-.section-contactus form{
-    width: 47%;
-}
-.section-contactus form input{
-    padding: 8px 8px;
-    margin: 25px 0;
-    border: none;
-    border-bottom: 2.3px solid #aaa;
-    width: 47%;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #333;
-    text-shadow: 0 0 2px rgb(120, 0, 145);
-}
-.section-contactus #msg{
-    margin-top: 50px;
-}
-.section-contactus form{
-    border: none;
+.container-form .form .inputBox{
+    position: relative;
+    width: 350px;
 }
 
+.container-form .form .inputBox input, .container-form .form .inputBox textarea{
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background-color: #223243;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.1),
+    5px 5px 5px rgba(0,0,0,0.35);
+    transition: 0.5;
+    outline: none;
+}
+.container-form .form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.5);
+}
+.container-form .form .inputBox input:valid ~ span,
+.container-form .form .inputBox input:focus ~ span,
+.container-form .form .inputBox textarea:focus ~ span,
+.container-form .form .inputBox textarea:focus ~ span
+{
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background-color: #223243;
+    transform: translateX(25px) translateY(-7px);
+    font-size: 0.8em;
+    padding: 0 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+}
+.container-form .form .inputBox input:valid,
+.container-form .form .inputBox input:focus,
+.container-form .form .inputBox textarea:valid,
+.container-form .form .inputBox textarea:focus
+{
+    border: 1px solid #00dfc4;
+}
+.container-form .form .inputBox i{
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    width: 25px;
+    font-size: 20px;
+    padding: 2px 0;
+    padding-right: 8px;
+    color: #00dfc4;
+    border-right: 1px solid #00dfc4;
+}
+
+.container-form .form .inputBox input[type="submit"]{
+    background-color: #00dfc4;
+    color: #223243;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.1),
+    15px 15px 15px rgba(0,0,0,0.35),
+    inset -2px -2px 15px rgba(255,255,255,0.1),
+    inset 25px 25px 15px rgba(0,0,0,0.35);
+    transition: all .2s;
+}
+.container-form .form .inputBox input:hover{
+    filter: brightness(0.80);
+}
+
+
+
+
+/* Formulario Fim*/
+
+
 .section-map {
-    background-image: url('../images/mapa.jpg');
     /* Pegando todo espaço disponível/necessário */
+    background-image: url('../images/mapa.jpg');
     background-size: cover;
     background-position: center;
     padding: 30px 0;
